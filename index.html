@@ -1,602 +1,474 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- font google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:wght@400;500;700&display=swap" 
-    rel="stylesheet">
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
 
-    <!-- My style -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!-- reponsive Style -->
-    <link rel="stylesheet" type="text/css" href="css/reponsive.css">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- logo title bar-->
-    <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+        <title>Responsive Website Travel</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Travel</a>
 
-    <title>HealingAja</title>
-  </head>
-  <body>
-      <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed w-100">
-      <div class="container">
-        <a class="navbar-brand" href="#">HealingAja</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item mx-2">
-              <a class="nav-link active" aria-current="page" href="#">BERANDA</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#Layanan">GUIDE</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#fitur">DESTINASI</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link" href="#Kontak">KONTAK</a>
-            </li>
-          </ul>
-          <div>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2 cari" type="search" placeholder="Mau kemana?" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Cari</button>
-          </form>
-          </div>
-        </div>
-      </div>
-    </nav>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#discover" class="nav__link">Discover</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#place" class="nav__link">Places</a>
+                        </li>
+                    </ul>
 
-<!-- hero section -->
-  <section id="hero">
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-md-6 hero-tagline my-auto">
-          <h1>Membantu Temukan Tujuan Healingmu</h1>
-          <p><span class="fw-bold">HealingAja</span> hadir untuk temukan spot healing yang pas buat kamu. Mau staycation, explore alam, atau sekedar refreshing, semua tempat seru ada di sini.</p>
-        </div>
-      </div>
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
 
-      <img src="assets/img/hero.png" class="position-absolute end-0 bottom-0 img-hero">
-      <img src="assets/img/accsent.png" class="accsent-img h-100 position-absolute top-0 start-0">
-    </div>
-  </section>
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
 
-  <!-- Layanan kami-->
-  <section id="Layanan">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2>Layanan Kami</h2>
-          <span class="sub-tittle">Rumah impian hadir menjadi solusi bagi kamu</span>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-4 text-center">
-          <div class="card-layanan">
-            <div class="circle-icon position-relative mx-auto">
-              <img src="assets/img/propertyicon.png" class="position-absolute top-50 start-50 translate-middle">
-            </div>
-            <h3 class="mt-4">Property Baru</h3>
-            <p class="mt-3">Rumah impian kini jadi kenyataan, Beli 
-rumah bary dengan fasilitas terbaik
-dengan lingkungan yang nyaman.</p>
-          </div>
-        </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
 
-        <div class="col-md-4 text-center">
-          <div class="card-layanan">
-            <div class="circle-icon position-relative mx-auto">
-              <img src="assets/img/iconsewa.png" class="position-absolute top-50 start-50 translate-middle">
-            </div>
-            <h3 class="mt-4">Sewa Rumah</h3>
-            <p class="mt-3">Sewa rumah yang indah untuk keluarga 
-anda, pilihan terbaik untuk tempat 
-tinggal keluarga mu</p>
-          </div>
-        </div>
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="assets/img/home1.jpg" alt="" class="home__img">
 
-        <div class="col-md-4 text-center">
-          <div class="card-layanan">
-            <div class="circle-icon position-relative mx-auto">
-              <img src="assets/img/iconbeli.png" class="position-absolute top-50 start-50 translate-middle">
-            </div>
-            <h3 class="mt-4">Beli Rumah</h3>
-            <p class="mt-3">Beli Rumah sempurna dengan harga 
-terbaik kualitas terjamin dari sumber 
-terpercaya</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">Discover your place</span>
+                        <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Beaches</b></h1>
+                        <a href="#" class="button">Explore</a>
 
-  <!-- search section -->
+                    </div>
 
-  <section id="search" class="d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2>Temukan Rumah Impianmu</h2>
-          <p class="sub-search">sekarang Anda dapat menghemat semua hal stres, waktu, dan biaya tersembunyi, dengan ratusan rumah untuk anda</p>
-        </div>
-      </div>
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
 
-      <div class="col-10 mx-auto mt-5">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Jual" type="button" role="tab" aria-controls="home" aria-selected="true">Jual</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Sewa" type="button" role="tab" aria-controls="profile" aria-selected="false">Sewa</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Propertybaru" type="button" role="tab" aria-controls="contact" aria-selected="false">Property Baru</button>
-  </li>
-</ul>
+                    <div class="home__info">
+                        <div>
+                            <span class="home__info-title">5 best places to visit</span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                More <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
 
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="Jual" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="home__info-overlay">
+                            <img src="assets/img/home2.jpg" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Drop Down tipe Rumah-->
-    <div class="input-group input-cari mb-3">
-  <button class="button-secundary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <img src="assets/img/icorumah.png" class="d-block d-lg-inline mx-auto">
-  Tipe Rumah</button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">More Information <br> About The Best Beaches</h2>
+                        <p class="about__description">You can find the most beautiful and pleasant places at the best 
+                            prices with special discounts, you choose the place we will guide you all the way to wait, get your 
+                            place now.
+                        </p>
+                        <a href="#" class="button">Reserve a place</a>
+                    </div>
 
-  <!-- Drop Down Range Harga-->
-<button class="button-secundary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <img src="assets/img/logouang.png" class="d-block d-lg-inline mx-auto">
-  Range Harga</button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-  <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="cari berdasarkam lokasi, ID, Property">
-   <button class="button-primary" type="button" id="button-addon2">Cari</button>
-</div>
-  </div>
-  <div class="tab-pane fade" id="Sewa" role="tabpanel" aria-labelledby="profile-tab">
-    <div class="input-group input-cari mb-3">
-  <button class="button-secundary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <img src="assets/img/icorumah.png" class="d-block d-lg-inline mx-auto">
-  Tipe Rumah</button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="assets/img/about1.jpg" alt="" class="about__img-one">
+                        </div>
 
-  <!-- Drop Down Range Harga-->
-<button class="button-secundary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <img src="assets/img/logouang.png" class="d-block d-lg-inline mx-auto">
-  Range Harga</button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-  <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="cari berdasarkam lokasi, ID, Property">
-   <button class="button-primary" type="button" id="button-addon2">Cari</button>
-</div>
-  </div>
-  <div class="tab-pane fade" id="Propertybaru" role="tabpanel" aria-labelledby="contact-tab">
-    <div class="input-group input-cari mb-3">
-  <button class="button-secundary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <img src="assets/img/icorumah.png" class="d-block d-lg-inline mx-auto">
-  Tipe Rumah</button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
+                        <div class="about__img-overlay">
+                            <img src="assets/img/about2.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== DISCOVER ====================-->
+            <section class="discover section" id="discover">
+                <h2 class="section__title">Discover the most <br> attractive places</h2>
+                
+                <div class="discover__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== DISCOVER 1 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/discover1.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Bali</h2>
+                                <span class="discover__description">24 tours available</span>
+                            </div>
+                        </div>
 
-  <!-- Drop Down Range Harga-->
-<button class="button-secundary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <img src="assets/img/logouang.png" class="d-block d-lg-inline mx-auto">
-  Range Harga</button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-  <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="cari berdasarkam lokasi, ID, Property">
-   <button class="button-primary" type="button" id="button-addon2">Cari</button>
-</div>
-  </div>
-</div>
-    </div>
-    </div>
+                        <!--==================== DISCOVER 2 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/discover2.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Hawaii</h2>
+                                <span class="discover__description">15 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== DISCOVER 3 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/discover3.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Hvar</h2>
+                                <span class="discover__description">18 tours available</span>
+                            </div>
+                        </div>
+
+                        <!--==================== DISCOVER 4 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="assets/img/discover4.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Whitehaven</h2>
+                                <span class="discover__description">32 tours available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                <h2 class="section__title">With Our Experience <br> We Will Serve You</h2>
+
+                <div class="experience__container container grid">
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number">20</h2>
+                            <span class="experience__description">Year <br> Experience</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">75</h2>
+                            <span class="experience__description">Complete <br> tours</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">650+</h2>
+                            <span class="experience__description">Tourist <br> Destination</span>
+                        </div>
+                    </div>
+
+                    <div class="experience__img grid">
+                        <div class="experience__overlay">
+                            <img src="assets/img/experience1.jpg" alt="" class="experience__img-one">
+                        </div>
+                        
+                        <div class="experience__overlay">
+                            <img src="assets/img/experience2.jpg" alt="" class="experience__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Video Tour</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Find out more with our video of the most beautiful and 
+                        pleasant places for you and your family.
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="assets/video/video.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place">
+                <h2 class="section__title">Choose Your Place</h2>
+
+                <div class="place__container container grid">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place1.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bali</h3>
+                                <span class="place__subtitle">Indonesia</span>
+                                <span class="place__price">$2499</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place2.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Bora Bora</h3>
+                                <span class="place__subtitle">Polinesia</span>
+                                <span class="place__price">$1599</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place3.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,9</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hawaii</h3>
+                                <span class="place__subtitle">EE.UU</span>
+                                <span class="place__price">$3499</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place4.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Whitehaven</h3>
+                                <span class="place__subtitle">Australia</span>
+                                <span class="place__price">$2499</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <div class="place__card">
+                        <img src="assets/img/place5.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title">Hvar</h3>
+                                <span class="place__subtitle">Croacia</span>
+                                <span class="place__price">$1999</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SUBSCRIBE ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
+                        <p class="subscribe__description">Subscribe to our newsletter and get a 
+                            special 30% discount.
+                        </p>
     
-  </section>
-
-    <!-- Rekomendasi section -->
-    <section id="rekomendasi">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2>Rekomendasi Rumah Untuk Mu</h2>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-evenly">
-            <div class="card p-2" style="width: 22rem">
-              <img src="assets/img/rumah1.png">
-              <div class="card-body">
-                <h4>IDR. 200.000.000</h4>
-                <p class="mb-4 lh-sm">Jl. Soekarno Hatta No.1 <br> <span class="text-danger">Sewa</span></p>
-              </div>
-
-              <div class="card-fasilitas d-flex justify-content-between px-4">
-                <span>
-                  <img src="assets/img/iconkasur.png"> 3
-                  <p>Kamar Tidur</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconwc.png"> 4
-                  <p>Kamar Mandi</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconluas.png"> 360
-                  <p>Luas Rumah</p>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-evenly">
-            <div class="card p-2" style="width: 22rem">
-              <img src="assets/img/rumah2.png">
-              <div class="card-body">
-                <h4>IDR. 200.000.000</h4>
-                <p class="mb-4 lh-sm">Jl. Soekarno Hatta No.1 <br> <span class="text-danger">Jual</span></p>
-              </div>
-
-              <div class="card-fasilitas d-flex justify-content-between px-4">
-                <span>
-                  <img src="assets/img/iconkasur.png"> 3
-                  <p>Kamar Tidur</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconwc.png"> 4
-                  <p>Kamar Mandi</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconluas.png"> 360
-                  <p>Luas Rumah</p>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-evenly">
-            <div class="card p-2" style="width: 22rem">
-              <img src="assets/img/rumah3.png">
-              <div class="card-body">
-                <h4>IDR. 200.000.000</h4>
-                <p class="mb-4 lh-sm">Jl. Soekarno Hatta No.1 <br> <span class="text-danger">Property Baru</span></p>
-              </div>
-
-              <div class="card-fasilitas d-flex justify-content-between px-4">
-                <span>
-                  <img src="assets/img/iconkasur.png"> 3
-                  <p>Kamar Tidur</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconwc.png"> 4
-                  <p>Kamar Mandi</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconluas.png"> 360
-                  <p>Luas Rumah</p>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-evenly">
-            <div class="card p-2" style="width: 22rem">
-              <img src="assets/img/rumah4.png">
-              <div class="card-body">
-                <h4>IDR. 200.000.000</h4>
-                <p class="mb-4 lh-sm">Jl. Soekarno Hatta No.1 <br> <span class="text-danger">Sewa</span></p>
-              </div>
-
-              <div class="card-fasilitas d-flex justify-content-between px-4">
-                <span>
-                  <img src="assets/img/iconkasur.png"> 3
-                  <p>Kamar Tidur</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconwc.png"> 4
-                  <p>Kamar Mandi</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconluas.png"> 360
-                  <p>Luas Rumah</p>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-evenly">
-            <div class="card p-2" style="width: 22rem">
-              <img src="assets/img/rumah5.png">
-              <div class="card-body">
-                <h4>IDR. 200.000.000</h4>
-                <p class="mb-4 lh-sm">Jl. Soekarno Hatta No.1 <br> <span class="text-danger">Sewa</span></p>
-              </div>
-
-              <div class="card-fasilitas d-flex justify-content-between px-4">
-                <span>
-                  <img src="assets/img/iconkasur.png"> 3
-                  <p>Kamar Tidur</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconwc.png"> 4
-                  <p>Kamar Mandi</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconluas.png"> 360
-                  <p>Luas Rumah</p>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-evenly">
-            <div class="card p-2" style="width: 22rem">
-              <img src="assets/img/rumah6.png">
-              <div class="card-body">
-                <h4>IDR. 200.000.000</h4>
-                <p class="mb-4 lh-sm">Jl. Soekarno Hatta No.1 <br> <span class="text-danger">Sewa</span></p>
-              </div>
-
-              <div class="card-fasilitas d-flex justify-content-between px-4">
-                <span>
-                  <img src="assets/img/iconkasur.png"> 3
-                  <p>Kamar Tidur</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconwc.png"> 4
-                  <p>Kamar Mandi</p>
-                </span>
-
-                 <span>
-                  <img src="assets/img/iconluas.png"> 360
-                  <p>Luas Rumah</p>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- fitur section -->
-
-<!-- fitur section -->
-
-  <section id="fitur" class="mt-5 overflow-hidden">
-    <div class="container position-relative">
-      <div class="row" class="mb-4">
-        <div class="col-lg-9 col-md-12 text-center text-lg-start">
-         <h2>Fitur Rumah</h2>
-        </div>
-        <div class="col-lg-3 col-md-12">
-          <button class="button-fitur">Lihat Semua..
-            <img src="assets/img/arrow.png" class="ms-2"></button>
-        </div>
-      </div>
-
-      <div class="container position-relative mt-5">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-start">
-            <div class="card-fitur me-3 position-relative">
-              <img src="assets/img/fitur1.png">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <h5>
-                    Kamar Tidur
-                  </h5>
-                  <span>Rumah Minimalis Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
+                        <form action="" class="subscribe__form">
+                            <input type="text" placeholder="Enter email" class="subscribe__input">
+    
+                            <button class="button">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="card-fitur me-3 position-relative">
-              <img src="assets/img/fitur2.png">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <h5>
-                    Kamar Tidur
-                  </h5>
-                  <span>Rumah Minimalis Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
+            </section>
+            
+            <!--==================== SPONSORS ====================-->
+            <section class="sponsor section">
+                <div class="sponsor__container container grid">
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors4.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="assets/img/sponsors5.png" alt="" class="sponsor__img">
+                    </div>
                 </div>
-              </div>
-            </div>
+            </section>
+        </main>
 
-            <div class="card-fitur me-3 position-relative">
-              <img src="assets/img/fitur3.png">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <h5>
-                    Kamar Tidur
-                  </h5>
-                  <span>Rumah Minimalis Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">Travel</h3>
+                        <p class="footer__description">Travel you choose the <br> destination, 
+                            we offer you the <br> experience.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">About</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">About Us</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Features</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">New & Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Company</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Team</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Plan y Pricing</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Become a member</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Support Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-            </div>
 
-            <div class="card-fitur me-3 position-relative">
-              <img src="assets/img/fitur4.png">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <h5>
-                    Kamar Tidur
-                  </h5>
-                  <span>Rumah Minimalis Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
-                </div>
-              </div>
-            </div>          <button class="button-arrow-left position-absolute start-0 top-50 translate-middle-y">
-            <img src="assets/img/logokiri.png">
-          </button>
-
-          <button class="button-arrow-right button-arrow-left position-absolute end-0 top-50 translate-middle-y">
-            <img src="assets/img/arrow.png">
-          </button>
-          </div>
-        </div>
-  </section>
-
-<!-- contact secstion -->
-  <section>
-    <div id="contact">
-      <div class="container-fluid overlay h-100">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h3>Butuh Konsultasi..?
-                  Silahkan Kontak Kami
-                  Kami Siap Membantu</h3>
-                  <div class="Kontak">
-                    <h6>Kontak</h6>
-                    <div class="mb-3 d-flex align-items-center">
-                      <div><img src="assets/img/alamaticon1.png"></div>
-                      <a href="#">Jl. Pelajar Pejuang 123 Majalaya Bandung Indonesia</a>
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2021 Bedimcode. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
                     </div>
-
-                    <div class="mb-3">
-                      <img src="assets/img/telepon.png">
-                      <a href="#">08765432123</a>
-                    </div>
-
-                    <div class="mb-3">
-                      <img src="assets/img/emailicon.png">
-                      <a href="#">rumahimpian@gmail.com</a>
-                    </div>
-                  </div>
-                  <h6>Social Media</h6>
-                    <a href="#" class="me-lg-3 me-1"><img src="assets/img/facebookicon.png"></a>
-                    <a href="#" class="me-lg-3 me-1"><img src="assets/img/twittericon.png"></a>
-                    <a href="#" class="me-lg-3 me-1"><img src="assets/img/instragamicon.png"></a>
-                    <a href="#" class="linkrumah">Rumah Impian</a>
-            </div>
-            <div class="col-md-6">
-                <div class="card-contact w-100">
-                  <form>
-                    <h2>ada pertanyaan..?</h2>
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput" class="d-flex align-items-center">Masukkan email anda</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput" class="d-flex align-items-center">Pertanyaan anda</label>
-                    </div>
-
-                    <button type="submit" class="button-kontak">Kirim</button>
-                  </form>
                 </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </footer>
 
-<footer class="d-flex align-items-center position-relative">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7 d-flex align-items-center justify-content-lg-start justify-content-center ">
-            <img src="assets/img/logo.png">
-            <a href="#" class="ms-3">Rumah Impian</a>
-          </div>  
-          <div class="col-md-5 d-flex justify-content-evenly justify-content-center">
-              <a href="#hero">Beranda</a>
-              <a href="#Layanan">Layanan</a>
-              <a href="#fitur">Fitur</a>
-              <a href="#contact">Kontak</a>
-          </div>
-        </div>
-        <div class="row position-absolute Copyright start-50 translate-middle">
-          <div class="col-12">
-            <p class="text-center">Copyright bg Creative Academy All Right Reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-</footer>
-  <script src="./js/script.js"></script>
-  </body>
-  
-</html> 
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
 
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
 
-
- 
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
