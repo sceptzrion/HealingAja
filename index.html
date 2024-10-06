@@ -12,19 +12,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>HealingAja</title>
   </head>
   <body>
     <!-- navbar -->
     <nav>
       <div class="nav__logo"><a href="#">HealingAja</a></div>
-      <ul class="nav__links">
+      <ul class="nav__links" id="mynav_links">
         <li class="link">Beranda</li>
         <li class="link">Destinasi</li>
         <li class="link">Promo</li>
         <li class="link">Layanan</li>
         <li class="link">Kontak</li>
       </ul>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </nav>
     <header>
       <div class="section__container">
@@ -141,10 +145,12 @@
           <span><i class="ri-linkedin-fill"></i></span>
         </div>
         <p>
-          Travel makes one modest. You see what a tiny place you occupy in the
-          world.
+          Perjalanan membuat kita rendah hati. Kita menyadari betapa kecilnya tempat yang kita huni di dunia ini.
+          <br><br>
+          Muhamad Ikhsan Rizqi Yanuar | SIB 7 - Fullstack IT Developer
         </p>
       </div>
     </footer>
+    <script src="../script.js"></script>
   </body>
 </html>
