@@ -140,7 +140,7 @@ header .section__container {
   padding: 1rem 2rem;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: var(--primary-color);
   color: var(--extra-light);
   font-size: 1rem;
